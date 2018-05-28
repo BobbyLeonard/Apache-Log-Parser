@@ -14,9 +14,9 @@ def WriteToFile(item, location):
 
 def IPsforWhois():
 
-		# Function to take the Ip Addresses parsed from Apache logs
-		# Perform a whois on each Ip and output to file
-		
+	# Function to perform a whois on each Ip parsed from Apache logs
+	# Ouput to file	
+	
         deleteOld = "sudo rm /home/bobby/WhoisList"
         os.system(deleteOld)
         path = open("/home/bobby/ApacheLogParserOutput", 'r')
@@ -29,9 +29,8 @@ def IPsforWhois():
 
 def CIDRtoBan():
 
-		# Function which takes the data from the whois file
-		# Searches for and returns lines relating to CIDR 
-		
+	# Function which searches for and returns lines relating to CIDR from the whois file
+	
         deleteOld = "sudo rm /home/bobby/CIDRtoBan"
         os.system(deleteOld)
         firstcat = "cat /home/bobby/WhoisList | grep route: > /home/bobby/CIDRtoBan"
