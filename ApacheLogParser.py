@@ -21,11 +21,9 @@ def IPsforWhois():
         os.system(deleteOld)
         path = open("/home/bobby/ApacheLogParserOutput", 'r')
         file = path.read()
-        recordCount = 0
         for IP in file.split("\n"):
             cmd = "whois %s >> /home/bobby/WhoisList" % (IP)
             os.system(cmd)
-            recordCount += 1
         path.close()
         os.system("clear")
 
