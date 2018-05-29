@@ -70,8 +70,8 @@ finalList = []
 for IP in todayList:
                 if not IP in yesterdayList:
                         finalList.append(IP)
-						# If the IP isnt in the list from yesterday
-						# add to the final list
+			# If the IP isnt in the list from yesterday
+			# add to the final list
 
 
 WriteToFile(finalList, "/home/bobby/CIDRtoBanYesterday")
