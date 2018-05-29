@@ -15,7 +15,7 @@ def WriteToFile(item, location):
 def IPsforWhois():
 
 	# Function to perform a whois on each Ip parsed from Apache logs
-	# Ouput to file	
+	# Output to file	
 	
         deleteOld = "sudo rm /home/bobby/WhoisList"
         os.system(deleteOld)
